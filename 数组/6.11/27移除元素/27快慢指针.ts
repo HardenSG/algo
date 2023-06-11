@@ -4,7 +4,9 @@
  * @param val
  * @returns
  */
-
+// 该题仅仅需要返回移除元素后的数组大小即可
+// 如果换个题目需要返回数组移除元素后的数组也很简单，只需要拿到慢指针的索引去截取原数组即可
+// 不需要使用额外的内存空间，但是截取字符串是需要遍历的，因此这部分也需要考虑
 function removeElement(nums: number[], val: number): number {
     // 快慢指针
     if (!nums.length) return 0;
@@ -29,7 +31,3 @@ function removeElement(nums: number[], val: number): number {
 
     return slow;
 }
-
-// 该题仅仅需要返回移除元素后的数组大小即可
-// 如果换个题目需要返回数组移除元素后的数组也很简单，只需要拿到慢指针的索引去截取原数组即可
-// 不需要使用额外的内存空间，但是截取字符串是需要遍历的，因此这部分也需要考虑
