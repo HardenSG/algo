@@ -98,4 +98,4 @@ function partition(nums: number[], l: number, r: number) {
 //     return Math.floor(Math.random() * (max - min + 1)) + min;
 //   }
 
-console.log(sortArray([1, -3]));
+console.log(sortArray([17, 8, 21, 35, 32, 15, 21, 25, 12, 23]));
