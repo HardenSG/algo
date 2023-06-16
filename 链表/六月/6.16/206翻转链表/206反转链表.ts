@@ -20,46 +20,46 @@ class ListNode {
  * @param head
  * @returns
  */
-// function reverseList(head: ListNode | null): ListNode | null {
-//     // 递归结束条件 - 递归将会截至到链表的倒数第二个元素
-//     if (!head || !head.next) return head;
+function reverseList(head: ListNode | null): ListNode | null {
+    // 递归结束条件 - 递归将会截至到链表的倒数第二个元素
+    if (!head || !head.next) return head;
 
-//     // 递归开始
-//     const newHead = reverseList(head.next);
+    // 递归开始
+    const newHead = reverseList(head.next);
 
-//     // 当前节点的下一个节点的next指向当前的节点实现反转
-//     head.next.next = head;
-//     // 当前节点的next指向null，在下一次递归中会再次修改next的指向
-//     head.next = null;
+    // 当前节点的下一个节点的next指向当前的节点实现反转
+    head.next.next = head;
+    // 当前节点的next指向null，在下一次递归中会再次修改next的指向
+    head.next = null;
 
-//     return newHead;
-// }
+    return newHead;
+}
 
 /**
  *  迭代形式
  * @param head
  * @returns
  */
-function reverseList(head: ListNode | null): ListNode | null {
-    if (!head || !head.next) return head;
+// function reverseList(head: ListNode | null): ListNode | null {
+//     if (!head || !head.next) return head;
 
-    let cur: ListNode | null = head;
-    let prev: ListNode | null = null;
+//     let cur: ListNode | null = head;
+//     let prev: ListNode | null = null;
 
-    while (cur) {
-        // 提前将下一个节点取出来，因为next修改后指向就会发生变化
-        const nextPoint = cur.next;
+//     while (cur) {
+//         // 提前将下一个节点取出来，因为next修改后指向就会发生变化
+//         const nextPoint = cur.next;
 
-        // 将当前的节点的next指向为上一个节点
-        cur.next = prev;
-        // 存储上一个节点，为当前的节点
-        prev = cur;
+//         // 将当前的节点的next指向为上一个节点
+//         cur.next = prev;
+//         // 存储上一个节点，为当前的节点
+//         prev = cur;
 
-        cur = nextPoint;
-    }
+//         cur = nextPoint;
+//     }
 
-    return prev;
-}
+//     return prev;
+// }
 
 const head = new ListNode(
     1,
