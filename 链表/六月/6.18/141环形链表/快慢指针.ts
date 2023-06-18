@@ -18,7 +18,7 @@ class ListNode {
 function hasCycle(head: ListNode | null): boolean {
     if (!head) return false;
 
-    let fast: ListNode | null = head.next;
+    let fast: ListNode | null = head;
     let slow: ListNode | null = head;
 
     // 如果fast.next都为null了，那么肯定是到最后一个节点了，那么肯定是没有环了
@@ -34,8 +34,7 @@ function hasCycle(head: ListNode | null): boolean {
 
     return false;
 }
-// 此题为快慢指针，让快慢指针先初始化不指向一个节点，如果在后面还能相等那说明一定有环
 // 让fast = fast.next.next 因为如果让fast = fast.next那就相当于和slow一样了悠闲地一次一个的移动
 // 那是绝对不可能相遇的，即使不用形成环，一定是要让fast去追slow，因此每次移动的步长为2
 
-export {};
+export { ListNode };
